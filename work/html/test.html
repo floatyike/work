@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="asideS">
+    <li class="show0"><small></small><span>Lorem ipsum dolor sit amet11111</span></li>
+    <li class="show0"><small></small><span>Lorem ipsum dolor sit amet22222</span></li>
+    <li class="show0"><small></small><span>Lorem ipsum dolor sit amet3333333</span></li>
+    <li class="show0"><small></small><span>Lorem ipsum dolor sit amet4444444</span></li>
+    <li class="show0"><small></small><span>Lorem ipsum dolor sit amet555555555</span></li>
+    <li class="show0"><small></small><span>Lorem ipsum dolor sit amet66666666</span></li>
+    <li class="show0"><small></small><span>Lorem ipsum dolor sit amet777777777777</span></li>
+</ul>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    var change=$('.show0:eq(2)');
+
+           change.hover(function () {
+
+        console.log($(this).index());
+        $('.show0:eq(6)').insertBefore($('.show0:eq(0)'));
+        change=$('.show0:eq(2)');
+        console.log(change.text());
+    });
+
+</script>
+
+</body>
+</html>

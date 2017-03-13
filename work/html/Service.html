@@ -1,0 +1,48 @@
+<article id="service">
+    <div>
+        <h2><span></span> 客户</h2>
+        <img src="images/client.jpeg" alt="">
+    </div>
+    <div style="position: relative;">
+        <h2><span></span> 工作</h2>
+        <div id="work">
+            <figure>
+                <h3>美食，工作，休息1</h3>
+                <img src="images/006.png" alt="">
+                <p></p>
+            </figure>
+            <figure>
+                <h3>美食，工作，休息1</h3>
+                <img src="images/006.png" alt="">
+                <p></p>
+            </figure>
+            <figure>
+                <h3>美食，工作，休息2</h3>
+                <img src="images/006.png" alt="">
+                <p></p>
+            </figure>
+            <figure>
+                <h3>美食，工作，休息3</h3>
+                <img src="images/006.png" alt="">
+                <p></p>
+             </figure>
+        </div>
+        <div id="controlS">
+            <div class="showSve">展开 <span></span></div>
+            <div class="showSve">收起 <span></span></div>
+        </div>
+    </div>
+
+</article>
+<aside id="STitle">
+    <div>服务案例</div>
+    <p></p>
+    <div>啵啦啵啦啵啦啵啦啵啦啵啦啵啦</div>
+</aside>
+<script>
+$('#controlS').delegate('.showSve','click',function () {
+    $(this).hide().siblings().show();
+    $('#work figure').toggle();
+});
+
+</script>

@@ -1,0 +1,54 @@
+<aside id="aAside">
+    <div>团队介绍</div>
+    <div></div>
+    <div>哈哈哈哈。。。哈哈哈哈哈</div>
+</aside>
+<article id="tArticle">
+    <div>
+        <img class="showtS showsC" src="images/007.png" style="width:378px;" alt="">
+        <img class="showtS showsC" src="images/009.png" style="width:348px;margin-left:-36px"alt="">
+    </div>
+    <!--文章-->
+    <div id="introduce">
+        <h3>团队简介</h3>
+        <ul>
+            <li class="tItr">11111Lorem ipsum dolor雨 sit amet, consectetur adipisicing elit. Accusantium architecto commodi cum deserunt earum exercitationem expedita id illum ipsa molestias necessitatibus nemo neque nulla quod reprehenderit tempora, totam veniam voluptatum.</li>
+            <li class="tItr">2222Lorem ipsum dolor 雪sit amet, consectetur adipisicing elit. Accusantium architecto commodi cum deserunt earum exercitationem expedita id illum ipsa molestias necessitatibus nemo neque nulla quod reprehenderit tempora, totam veniam voluptatum.</li>
+            <li class="tItr">33333Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto commodi cum deserunt earum exercitationem expedita id illum ipsa molestias necessitatibus nemo neque nulla quod reprehenderit tempora, totam veniam voluptatum.</li>
+            <li class="tItr">44444Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto commodi cum deserunt earum exercitationem expedita id illum ipsa molestias necessitatibus nemo neque nulla quod reprehenderit tempora, totam veniam voluptatum.</li>
+            <li class="tItr">555555Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto commodi cum deserunt earum exercitationem expedita id illum ipsa molestias necessitatibus nemo neque nulla quod reprehenderit tempora, totam veniam voluptatum.</li>
+            <li class="tItr">666666Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto commodi cum deserunt earum exercitationem expedita id illum ipsa molestias necessitatibus nemo neque nulla quod reprehenderit tempora, totam veniam voluptatum.</li>
+            <li class="tItr">77777  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium architecto commodi cum deserunt earum exercitationem expedita id illum ipsa molestias necessitatibus nemo neque nulla quod reprehenderit tempora, totam veniam voluptatum.</li>
+        </ul>
+        <br>
+    </div>
+    <div id="imgM">
+        <img class="showt showsC" src="images/010.png" style="width:220px;" alt="">
+        <img class="showt showsC" src="images/011.png" style="width:310px;height:110px;" alt="">
+        <img class="showt showsC" src="images/012.png" style="width:310px;height:100px;margin-left:-21px;" alt="">
+        <img class="showt showsC" src="images/013.png" style="width:200px;float:right;margin-top: -112px;margin-left: -10px;"alt="">
+    </div>
+</article>
+<script>
+    $('.showtS').on('mouseenter',function () {
+//        $('.tItr').eq(6).hide();
+//        $(this).removeClass('showsC');//toggleClass() class 不用加点 removeClass等一样
+
+        var i=$(this).index();
+//fadeIn()与fadeOut() 前加fadeIn()防止切换时动画不正常
+        $('.tItr').eq(i).stop().fadeIn(300).siblings().stop().fadeOut(300);
+//        $('.tItr').eq(i).fadeIn().siblings().fadeOut();
+    });
+    $('.showt').on('mouseover',function () {
+//        $('.tItr').eq(6).hide();
+//        $(this).toggleClass('showsC');
+        var i=$(this).index()+2;
+//        $('.tItr').eq(i).fadeIn().siblings().hide();
+        $('.tItr').eq(i).stop().fadeIn(300).siblings().stop().fadeOut(100);
+    });
+    $('#introduce').on('mouseover',function () {
+//    $('.showsC').on('mouseout',function () {
+//        $('.tItr').eq(6).fadeIn().siblings().hide();
+        $('.tItr').eq(6).stop().fadeIn(300).siblings().stop().fadeOut(100);
+    });
+</script>
