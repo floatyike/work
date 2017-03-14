@@ -7,24 +7,51 @@
     <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto dolores enim error esse inventore iste iusto, laudantium molestiae molestias</h2>
     <div>
         <ul id="category">
-            <li>Category <span></span></li>
+            <li>职位类别 <span></span></li>
 
-            <li class="showCtg active">All</li>
-            <li class="showCtg">Create</li>
-            <li class="showCtg">Consumer</li>
-            <li class="showCtg">General</li>
+            <li class="showCtg active">不限</li>
+            <li class="showCtg">战士</li>
+            <li class="showCtg">法师</li>
+            <li class="showCtg">弓箭手</li>
+        </ul>
+        <ul id="dates">
+            <li>工作经验 <span></span></li>
+
+            <li class="showCtg active">不限</li>
+            <li class="showCtg">无经验</li>
+            <li class="showCtg">1年以上</li>
+            <li class="showCtg">2-3年</li>
         </ul>
         <p class="lineS"></p>
         <ul class="jDetail">
-            <li>
+            <!--<li>
                 <p class="titles"><i></i> <span class="firstd">Consumer PR</span> <span>Beijing</span> <span class="JShow">Detail<b></b></span></p>
                 <div class="jDtr">
-                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusantium aliquid aut enim exercitationem impedit modi ratione rem sint soluta. Cupiditate dolore incidunt obcaecati suscipit totam. A accusamus architecto fugiat.</h3>
+                    <h3>能力要求：</h3>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur at aut dolor esse explicabo inventore iusto laborum molestiae natus nulla, pariatur perspiciatis possimus repellat rerum sunt vel vero voluptatem.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda atque consequuntur cupiditate dignissimos eos exercitationem inventore, ipsa ipsum itaque maxime necessitatibus optio quaerat saepe soluta tenetur voluptatem. Molestias, quae.
+                        <ul>
+                            <li>1.出色的创作力，良好的文字功底，擅长短片策划和编写，叙事逻辑清晰，有良好的审美能力；</li>
+                            <li>2. 与团队进行头脑风暴，整合各种新颖、逗比、好玩的内容，提高项目质量；</li>
+                            <li>3. 需要有段子编写能力。</li>
+                            <li>4.有网络节目／网络剧等剧本经验者优先；</li>
+                            <li>5.必须具良好职业道德与操守，工作积极主动，富有团队精神，能承受工作压力；</li>
+                            <li>6.必须要熟悉网络流行词汇及流行风向，二次元爱好者优先。</li>
+                        </ul>
                     </div>
+                    <h3>岗位职责：</h3>
+                    <div>
+                        <ul>
+                            <li>1.出色的创作力，良好的文字功底，擅长短片策划和编写，叙事逻辑清晰，有良好的审美能力；</li>
+                            <li>2. 与团队进行头脑风暴，整合各种新颖、逗比、好玩的内容，提高项目质量；</li>
+                            <li>3. 需要有段子编写能力。</li>
+                            <li>4.有网络节目／网络剧等剧本经验者优先；</li>
+                            <li>5.必须具良好职业道德与操守，工作积极主动，富有团队精神，能承受工作压力；</li>
+                            <li>6.必须要熟悉网络流行词汇及流行风向，二次元爱好者优先。</li>
+                        </ul>
+                    </div>
+
                     <span class="shut">关闭<b></b></span>
+                    <br>
                 </div>
             </li>
             <li>
@@ -36,6 +63,8 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda atque consequuntur cupiditate dignissimos eos exercitationem inventore, ipsa ipsum itaque maxime necessitatibus optio quaerat saepe soluta tenetur voluptatem. Molestias, quae.
                     </div>
                     <span class="shut">关闭<b></b></span>
+                    <br>
+                    <br>
                 </div>
             </li>
             <li>
@@ -47,16 +76,45 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda atque consequuntur cupiditate dignissimos eos exercitationem inventore, ipsa ipsum itaque maxime necessitatibus optio quaerat saepe soluta tenetur voluptatem. Molestias, quae.
                     </div>
                     <span class="shut">关闭<b></b></span>
+                    <br>
                 </div>
-            </li>
+            </li>-->
         </ul>
     </div>
 </article>
 <script>
-$('.jDetail').on('click','.JShow',function () {
-    $(this).parent().siblings().fadeIn();
-})
-$('.jDetail').on('click','.shut',function () {
-    $(this).parent().fadeOut();
-})
+    var load={
+        '不限不限':'html/join/all-1.html',
+        '不限无经验':'html/join/all-2.html',
+        '不限1年以上':'html/join/all-3.html',
+        '不限2-3年':'html/join/all-4.html',
+        '战士不限':'html/join/all0-1.html',
+        '战士无经验':'html/join/all0-2.html',
+        '战士1年以上':'html/join/all0-3.html',
+        '战士2-3年':'html/join/all0-4.html',
+        '法师不限':'html/join/all00-1.html',
+        '法师无经验':'html/join/all00-2.html',
+        '法师1年以上':'html/join/all00-3.html',
+        '法师2-3年':'html/join/all00-4.html',
+        '弓箭手不限':'html/join/all01-1.html',
+        '弓箭手无经验':'html/join/all02-2.html',
+        '弓箭手1年以上':'html/join/all03-3.html',
+        '弓箭手2-3年':'html/join/all04-4.html'
+    };
+    $('.jDetail').load('html/join/all-1.html');
+    var change=function () {
+        $(this).siblings().removeClass('active');
+        $(this).addClass('active');
+        var option=$('#category li.active').text()+$('#dates li.active').text();
+        //加载
+        $('.jDetail').load(load[option]);
+    }
+    $('#category').on('click','.showCtg',change);
+    $('#dates').on('click','.showCtg',change);
+    $('.jDetail').on('click','.JShow',function () {
+        $(this).parent().siblings().fadeIn();
+    })
+    $('.jDetail').on('click','.shut',function () {
+        $(this).parent().fadeOut();
+    })
 </script>

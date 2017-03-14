@@ -102,6 +102,7 @@
             var i=$(this).index();
          if(i!=3){
              $('.show0:eq(6)').insertBefore($('.show0:eq(0)'));
+
             //简介
              smipleItr?$('.show1:eq(6)').insertBefore($('.show1:eq(0)')):'';
             //详细内容
@@ -123,7 +124,8 @@
              //简介
              smipleItr?$('.show1:eq(3)').stop().fadeIn(300).siblings().stop().fadeOut(100):'';
              //详细
-             details?$('.showDtl:eq(3)').stop().fadeIn(300).siblings().stop().fadeOut(100):'';
+//             details?$('.showDtl:eq(3)').stop().fadeIn(300).siblings().stop().fadeOut(100):'';
+             details?$('.showDtl:eq(3)').stop().fadeIn(500).siblings().stop().hide():'';
 //             console.log($('.show0:eq(3)').text())
          }else{
              smipleItr=false;

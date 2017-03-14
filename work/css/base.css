@@ -491,29 +491,29 @@ img.showsC:hover{
 #jArticle{
     text-align: start;
 }
-#category{
+#category,#dates{
     margin-top:20px;
 }
-#category li{
+#category li,#dates li{
     line-height: 28px;
     float:left;
     margin-left: 20px;
 }
-#category li:first-child{
+#category li:first-child,#dates li:first-child{
     width:150px;
     font-size: 28px;
     margin-left: 0;
 }
-#category li:first-child span{
+#category li:first-child span,#dates li:first-child span{
     font-size: 18px;
     margin-left:18px;
     border-left: 2px solid #72706D;
 }
-#category li.active{
+#category li.active,#dates li.active{
     border-bottom:2px solid yellow;
 }
 #jArticle .lineS{
-    margin:10px 0;
+    margin-top:60px;
     border-bottom: 2px solid #72706D;
 }
 .titles{
@@ -563,7 +563,7 @@ img.showsC:hover{
 }
 
 .jDetail li{
-    margin-top:36px;
+    margin-top:10px;
 }
 
 
